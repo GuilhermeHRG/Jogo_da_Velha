@@ -1,13 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+    font-size: 58px;
+    background-color: #00000015;
+    width: 100%;
+}
+h2{
+    display: flex;
+    margin-top: 20px;
+    padding-top: 20px;
+    background-color: #00000015;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+}
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #8799ffab;
-}
-h1{
-    font-size: 68px;
+    background-color: #87b1ffab;
 }
 .board {
-
     display: grid;
     grid-template-columns: repeat(3, 100px);
     gap: 10px;
@@ -27,8 +46,9 @@ h1{
 }
 
 .cell:hover {
-    background-color: #6c6c6d;
-    transform: scale(1.1);
+    background-color: #00000093;
+    border: 1px solid white;
+    transform: scale(0.9);
 }
 
 .message {
@@ -37,14 +57,16 @@ h1{
     justify-content: center;
     align-items: center;
     font-size: 68px;
-    margin-top: 20px;
+    margin: 20px;
 }
-
 .restart-button {
-    margin: 40px;
+    justify-content: center;
+    align-items: center;
     font-size: 18px;
+    width: 300px;
     margin-top: 10px;
-    padding: 10px 20px;
+    margin-bottom: 20px;
+    padding: 10px;
     cursor: pointer;
     background-color: aliceblue;
     border: none;
@@ -54,3 +76,30 @@ h1{
     color: white;
     transform: scale(1.1);
 }
+.main{
+    display: flex;
+    padding: 50px;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 40px;
+    background-color: #00000015;
+}
+.main button{
+    display: flex;
+    font-weight: bold;
+    width: 350px;
+    height: 140px;
+    align-items: center;
+    font-size: 50px;
+    justify-content: center;
+    text-align: center;
+    flex-direction: row;
+    background-color: #00000093;
+    color: white;
+    border-radius: 20px;
+}
+.main p {
+    padding: 30px;
+}
+
+

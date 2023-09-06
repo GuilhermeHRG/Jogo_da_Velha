@@ -1,6 +1,7 @@
 const cells = document.querySelectorAll("[data-cell]");
 const message = document.getElementById("message");
 const restartButton = document.getElementById("restart");
+const contaPartida = document.getElementById("partidas");
 const playerXScore = document.getElementById("playerXScore");
 const playerOScore = document.getElementById("playerOScore");
 
@@ -9,6 +10,7 @@ let gameBoard = ["", "", "", "", "", "", "", "", ""];
 let gameActive = true;
 let playerXWins = 0;
 let playerOWins = 0;
+let contPartida = 1;
 let winner = null; // Variável para armazenar o jogador vencedor
 
 const winningCombinations = [
@@ -67,11 +69,15 @@ function restartGame() {
     gameActive = true;
     winner = null; // Reiniciar a variável de vencedor
     message.innerText = `Vez do jogador X`;
+    contaPartida.innerText = contPartida++;
+    
     cells.forEach(cell => {
         cell.innerText = "";
         cell.classList.remove("X", "O", "win");
+        
     });
     currentPlayer = "X";
+   
 }
 
 cells.forEach(cell => cell.addEventListener("click", handleClick));
