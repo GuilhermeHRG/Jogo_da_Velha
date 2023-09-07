@@ -5,7 +5,6 @@
 .nav{
     display: flex;
     justify-content: space-around;
-    padding-top: 20px;
     font-size: 58px;
     width: 100%;
     background-color: rgba(78, 77, 77, 0.671);
@@ -13,7 +12,6 @@
 h2, .contPartida{
     display: flex;
     padding-top: 10px;
-    
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -59,8 +57,8 @@ body {
 
 .message {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    justify-content:space-around;
     align-items: center;
     font-size: 68px;
     margin: 20px;
@@ -111,5 +109,5 @@ body {
     border-radius: 20px;
 }
 .main p {
-    padding: 30px;
+    padding: 20px;
 }

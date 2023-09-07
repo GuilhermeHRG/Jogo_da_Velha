@@ -18,9 +18,15 @@ const winningCombinations = [
     [0, 3, 6], [1, 4, 7], [2, 5, 8],
     [0, 4, 8], [2, 4, 6]
 ];
+function playAudio(audioFile){
+    var audio = new Audio(audioFile);
+    audio.play();
+
+}
 
 function checkWinner() {
     for (let combo of winningCombinations) {
+       
         const [a, b, c] = combo;
         if (gameBoard[a] && gameBoard[a] === gameBoard[b] && gameBoard[a] === gameBoard[c]) {
             winner = gameBoard[a]; // Definir o jogador vencedor
@@ -30,13 +36,17 @@ function checkWinner() {
             cells[b].classList.add("win");
             cells[c].classList.add("win");
             updateScore(winner);
+            //
+            playAudio('/assets/flawless-victory.mp3');
             return;
+            
         }
     }
 
     if (!gameBoard.includes("") && gameActive) {
         gameActive = false;
         message.innerText = "Empate!";
+        playAudio('/assets/wastern.mp3');
     }
 }
 
@@ -79,6 +89,7 @@ function restartGame() {
     currentPlayer = "X";
    
 }
+
 
 cells.forEach(cell => cell.addEventListener("click", handleClick));
 restartButton.addEventListener("click", restartGame);
